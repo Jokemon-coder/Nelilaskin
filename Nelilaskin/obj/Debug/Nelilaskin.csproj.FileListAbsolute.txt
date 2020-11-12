@@ -1,0 +1,10 @@
+C:\Users\joel.mantere\source\repos\Nelilaskin\Nelilaskin\bin\Debug\Nelilaskin.exe.config
+C:\Users\joel.mantere\source\repos\Nelilaskin\Nelilaskin\bin\Debug\Nelilaskin.exe
+C:\Users\joel.mantere\source\repos\Nelilaskin\Nelilaskin\bin\Debug\Nelilaskin.pdb
+C:\Users\joel.mantere\source\repos\Nelilaskin\Nelilaskin\obj\Debug\Nelilaskin.csprojAssemblyReference.cache
+C:\Users\joel.mantere\source\repos\Nelilaskin\Nelilaskin\obj\Debug\Nelilaskin.Nelilaskin.resources
+C:\Users\joel.mantere\source\repos\Nelilaskin\Nelilaskin\obj\Debug\Nelilaskin.Properties.Resources.resources
+C:\Users\joel.mantere\source\repos\Nelilaskin\Nelilaskin\obj\Debug\Nelilaskin.csproj.GenerateResource.cache
+C:\Users\joel.mantere\source\repos\Nelilaskin\Nelilaskin\obj\Debug\Nelilaskin.csproj.CoreCompileInputs.cache
+C:\Users\joel.mantere\source\repos\Nelilaskin\Nelilaskin\obj\Debug\Nelilaskin.exe
+C:\Users\joel.mantere\source\repos\Nelilaskin\Nelilaskin\obj\Debug\Nelilaskin.pdb
