@@ -49,8 +49,14 @@
             this.NappiClear = new System.Windows.Forms.Button();
             this.NappiReset = new System.Windows.Forms.Button();
             this.NappiCopy = new System.Windows.Forms.Button();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -59,27 +65,26 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tulos, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 12);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 27);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.97756F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.02244F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 428);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 413);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tulos
             // 
             this.tulos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tulos.Location = new System.Drawing.Point(3, 3);
             this.tulos.Multiline = true;
             this.tulos.Name = "tulos";
             this.tulos.ReadOnly = true;
-            this.tulos.Size = new System.Drawing.Size(374, 79);
+            this.tulos.Size = new System.Drawing.Size(374, 76);
             this.tulos.TabIndex = 0;
             this.tulos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tulos.TextChanged += new System.EventHandler(this.tekstiLoota_TextChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -106,7 +111,7 @@
             this.tableLayoutPanel2.Controls.Add(this.NappiClear, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.NappiReset, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.NappiCopy, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 88);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 85);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -115,15 +120,15 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(374, 337);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(374, 325);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // NappiEqual
             // 
             this.NappiEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NappiEqual.Location = new System.Drawing.Point(282, 271);
+            this.NappiEqual.Location = new System.Drawing.Point(282, 263);
             this.NappiEqual.Name = "NappiEqual";
-            this.NappiEqual.Size = new System.Drawing.Size(87, 61);
+            this.NappiEqual.Size = new System.Drawing.Size(87, 59);
             this.NappiEqual.TabIndex = 19;
             this.NappiEqual.Text = "=";
             this.NappiEqual.UseVisualStyleBackColor = true;
@@ -132,9 +137,9 @@
             // Nappi0
             // 
             this.Nappi0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nappi0.Location = new System.Drawing.Point(96, 271);
+            this.Nappi0.Location = new System.Drawing.Point(96, 263);
             this.Nappi0.Name = "Nappi0";
-            this.Nappi0.Size = new System.Drawing.Size(87, 61);
+            this.Nappi0.Size = new System.Drawing.Size(87, 59);
             this.Nappi0.TabIndex = 17;
             this.Nappi0.Text = "0";
             this.Nappi0.UseVisualStyleBackColor = true;
@@ -143,9 +148,9 @@
             // NappiJako
             // 
             this.NappiJako.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NappiJako.Location = new System.Drawing.Point(282, 204);
+            this.NappiJako.Location = new System.Drawing.Point(282, 198);
             this.NappiJako.Name = "NappiJako";
-            this.NappiJako.Size = new System.Drawing.Size(87, 61);
+            this.NappiJako.Size = new System.Drawing.Size(87, 59);
             this.NappiJako.TabIndex = 15;
             this.NappiJako.Text = ":";
             this.NappiJako.UseVisualStyleBackColor = true;
@@ -154,9 +159,9 @@
             // Nappi3
             // 
             this.Nappi3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nappi3.Location = new System.Drawing.Point(189, 204);
+            this.Nappi3.Location = new System.Drawing.Point(189, 198);
             this.Nappi3.Name = "Nappi3";
-            this.Nappi3.Size = new System.Drawing.Size(87, 61);
+            this.Nappi3.Size = new System.Drawing.Size(87, 59);
             this.Nappi3.TabIndex = 14;
             this.Nappi3.Text = "3";
             this.Nappi3.UseVisualStyleBackColor = true;
@@ -165,9 +170,9 @@
             // Nappi2
             // 
             this.Nappi2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nappi2.Location = new System.Drawing.Point(96, 204);
+            this.Nappi2.Location = new System.Drawing.Point(96, 198);
             this.Nappi2.Name = "Nappi2";
-            this.Nappi2.Size = new System.Drawing.Size(87, 61);
+            this.Nappi2.Size = new System.Drawing.Size(87, 59);
             this.Nappi2.TabIndex = 13;
             this.Nappi2.Text = "2";
             this.Nappi2.UseVisualStyleBackColor = true;
@@ -176,9 +181,9 @@
             // Nappi1
             // 
             this.Nappi1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nappi1.Location = new System.Drawing.Point(3, 204);
+            this.Nappi1.Location = new System.Drawing.Point(3, 198);
             this.Nappi1.Name = "Nappi1";
-            this.Nappi1.Size = new System.Drawing.Size(87, 61);
+            this.Nappi1.Size = new System.Drawing.Size(87, 59);
             this.Nappi1.TabIndex = 12;
             this.Nappi1.Text = "1";
             this.Nappi1.UseVisualStyleBackColor = true;
@@ -187,9 +192,9 @@
             // NappiKerto
             // 
             this.NappiKerto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NappiKerto.Location = new System.Drawing.Point(282, 137);
+            this.NappiKerto.Location = new System.Drawing.Point(282, 133);
             this.NappiKerto.Name = "NappiKerto";
-            this.NappiKerto.Size = new System.Drawing.Size(87, 61);
+            this.NappiKerto.Size = new System.Drawing.Size(87, 59);
             this.NappiKerto.TabIndex = 11;
             this.NappiKerto.Text = "*";
             this.NappiKerto.UseVisualStyleBackColor = true;
@@ -198,9 +203,9 @@
             // Nappi6
             // 
             this.Nappi6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nappi6.Location = new System.Drawing.Point(189, 137);
+            this.Nappi6.Location = new System.Drawing.Point(189, 133);
             this.Nappi6.Name = "Nappi6";
-            this.Nappi6.Size = new System.Drawing.Size(87, 61);
+            this.Nappi6.Size = new System.Drawing.Size(87, 59);
             this.Nappi6.TabIndex = 10;
             this.Nappi6.Text = "6";
             this.Nappi6.UseVisualStyleBackColor = true;
@@ -209,9 +214,9 @@
             // Nappi5
             // 
             this.Nappi5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nappi5.Location = new System.Drawing.Point(96, 137);
+            this.Nappi5.Location = new System.Drawing.Point(96, 133);
             this.Nappi5.Name = "Nappi5";
-            this.Nappi5.Size = new System.Drawing.Size(87, 61);
+            this.Nappi5.Size = new System.Drawing.Size(87, 59);
             this.Nappi5.TabIndex = 9;
             this.Nappi5.Text = "5";
             this.Nappi5.UseVisualStyleBackColor = true;
@@ -220,9 +225,9 @@
             // Nappi4
             // 
             this.Nappi4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nappi4.Location = new System.Drawing.Point(3, 137);
+            this.Nappi4.Location = new System.Drawing.Point(3, 133);
             this.Nappi4.Name = "Nappi4";
-            this.Nappi4.Size = new System.Drawing.Size(87, 61);
+            this.Nappi4.Size = new System.Drawing.Size(87, 59);
             this.Nappi4.TabIndex = 8;
             this.Nappi4.Text = "4";
             this.Nappi4.UseVisualStyleBackColor = true;
@@ -231,9 +236,9 @@
             // NappiMiinus
             // 
             this.NappiMiinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NappiMiinus.Location = new System.Drawing.Point(282, 70);
+            this.NappiMiinus.Location = new System.Drawing.Point(282, 68);
             this.NappiMiinus.Name = "NappiMiinus";
-            this.NappiMiinus.Size = new System.Drawing.Size(87, 61);
+            this.NappiMiinus.Size = new System.Drawing.Size(87, 59);
             this.NappiMiinus.TabIndex = 7;
             this.NappiMiinus.Text = "-";
             this.NappiMiinus.UseVisualStyleBackColor = true;
@@ -242,9 +247,9 @@
             // Nappi9
             // 
             this.Nappi9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nappi9.Location = new System.Drawing.Point(189, 70);
+            this.Nappi9.Location = new System.Drawing.Point(189, 68);
             this.Nappi9.Name = "Nappi9";
-            this.Nappi9.Size = new System.Drawing.Size(87, 61);
+            this.Nappi9.Size = new System.Drawing.Size(87, 59);
             this.Nappi9.TabIndex = 6;
             this.Nappi9.Text = "9";
             this.Nappi9.UseVisualStyleBackColor = true;
@@ -253,9 +258,9 @@
             // Nappi8
             // 
             this.Nappi8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nappi8.Location = new System.Drawing.Point(96, 70);
+            this.Nappi8.Location = new System.Drawing.Point(96, 68);
             this.Nappi8.Name = "Nappi8";
-            this.Nappi8.Size = new System.Drawing.Size(87, 61);
+            this.Nappi8.Size = new System.Drawing.Size(87, 59);
             this.Nappi8.TabIndex = 5;
             this.Nappi8.Text = "8";
             this.Nappi8.UseVisualStyleBackColor = true;
@@ -264,9 +269,9 @@
             // Nappi7
             // 
             this.Nappi7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nappi7.Location = new System.Drawing.Point(3, 70);
+            this.Nappi7.Location = new System.Drawing.Point(3, 68);
             this.Nappi7.Name = "Nappi7";
-            this.Nappi7.Size = new System.Drawing.Size(87, 61);
+            this.Nappi7.Size = new System.Drawing.Size(87, 59);
             this.Nappi7.TabIndex = 4;
             this.Nappi7.Text = "7";
             this.Nappi7.UseVisualStyleBackColor = true;
@@ -277,7 +282,7 @@
             this.NappiPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NappiPlus.Location = new System.Drawing.Point(282, 3);
             this.NappiPlus.Name = "NappiPlus";
-            this.NappiPlus.Size = new System.Drawing.Size(87, 61);
+            this.NappiPlus.Size = new System.Drawing.Size(87, 59);
             this.NappiPlus.TabIndex = 3;
             this.NappiPlus.Text = "+";
             this.NappiPlus.UseVisualStyleBackColor = true;
@@ -288,7 +293,7 @@
             this.NappiClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NappiClear.Location = new System.Drawing.Point(189, 3);
             this.NappiClear.Name = "NappiClear";
-            this.NappiClear.Size = new System.Drawing.Size(87, 61);
+            this.NappiClear.Size = new System.Drawing.Size(87, 59);
             this.NappiClear.TabIndex = 2;
             this.NappiClear.Text = "C";
             this.NappiClear.UseVisualStyleBackColor = true;
@@ -299,7 +304,7 @@
             this.NappiReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NappiReset.Location = new System.Drawing.Point(96, 3);
             this.NappiReset.Name = "NappiReset";
-            this.NappiReset.Size = new System.Drawing.Size(87, 61);
+            this.NappiReset.Size = new System.Drawing.Size(87, 59);
             this.NappiReset.TabIndex = 1;
             this.NappiReset.Text = "R";
             this.NappiReset.UseVisualStyleBackColor = true;
@@ -310,11 +315,51 @@
             this.NappiCopy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NappiCopy.Location = new System.Drawing.Point(3, 3);
             this.NappiCopy.Name = "NappiCopy";
-            this.NappiCopy.Size = new System.Drawing.Size(87, 61);
+            this.NappiCopy.Size = new System.Drawing.Size(87, 59);
             this.NappiCopy.TabIndex = 0;
             this.NappiCopy.Text = "Copy";
             this.NappiCopy.UseVisualStyleBackColor = true;
             this.NappiCopy.Click += new System.EventHandler(this.nappiCopy_Click);
+            // 
+            // menuStrip
+            // 
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(399, 24);
+            this.menuStrip.TabIndex = 1;
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem1});
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "File";
+            // 
+            // exitToolStripMenuItem1
+            // 
+            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem1.Text = "Exit";
+            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.poistu_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // Nelilaskin
             // 
@@ -322,12 +367,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 452);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.menuStrip);
+            this.MainMenuStrip = this.menuStrip;
             this.Name = "Nelilaskin";
             this.Text = "Nelilaskin";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -354,6 +404,11 @@
         private System.Windows.Forms.Button NappiReset;
         private System.Windows.Forms.Button NappiCopy;
         private System.Windows.Forms.TextBox tulos;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 

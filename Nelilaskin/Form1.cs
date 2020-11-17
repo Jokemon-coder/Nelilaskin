@@ -20,6 +20,18 @@ namespace Nelilaskin
             InitializeComponent();
         }
 
+        private void poistu_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tekijä: Joel\nCopy-painikkeen käyttö:\nValitse luku, valitse laskutapa,\npaina 'Copy' ja paina yhtäsuuruusmerkkiä.", "Nelilaskin About");
+        }
+
+
+
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
