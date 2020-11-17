@@ -12,6 +12,9 @@ namespace Nelilaskin
 {
     public partial class Nelilaskin : Form
     {
+        Double arvo = 0;
+        String operaatio = "";
+        bool operaatio_Click = false;
         public Nelilaskin()
         {
             InitializeComponent();
@@ -24,56 +27,67 @@ namespace Nelilaskin
 
         private void nappiCopy_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(tekstiLoota.Text);
+            Clipboard.SetText(tulos.Text);
         }
 
         private void nappiReset_Click(object sender, EventArgs e)
         {
-            tekstiLoota.Clear();
+            tulos.Clear();
         }
 
         private void nappiClear_Click(object sender, EventArgs e)
         {
-            if (tekstiLoota.Text.Length > 0)
+            if (tulos.Text.Length > 0)
             {
-                tekstiLoota.Text = tekstiLoota.Text.Remove(tekstiLoota.Text.Length - 1, 1);
+                tulos.Text = tulos.Text.Remove(tulos.Text.Length - 1, 1);
             }
+            
         }
 
-
-        private void nappiJako_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nappiKerto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nappiMiinus_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nappiPlus_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void NappiNum_Click(object sender, EventArgs e)
         {
-            tekstiLoota.Text += (Nappi as Button).Text;
+            if ((tulos.Text == "0") || (operaatio_Click))
+                tulos.Clear();
+            operaatio_Click = false;
+            Button b = (Button)sender;
+            tulos.Text = tulos.Text + b.Text;
+        }
 
-            try
+        private void tekstiLoota_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nappiOperaattori_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            operaatio = b.Text;
+            arvo = Double.Parse(tulos.Text);
+            operaatio_Click = true;
+            
+        }
+
+        private void nappiEqual_Click(object sender, EventArgs e) //Operaatiot otetaan mukaan laskuun ja yhteenlasku-painike laskee laskun ja antaa tuloksen
+        {
+
+            switch (operaatio)
             {
-                tekstiLoota.Text += (Nappi as Button).Text;
-            }
-
-            catch
-            {
-
-            }
+                case "+":
+                    tulos.Text = (arvo + Double.Parse(tulos.Text)).ToString();
+                    break;
+                case "-":
+                    tulos.Text = (arvo - Double.Parse(tulos.Text)).ToString();
+                    break;
+                case "*":
+                    tulos.Text = (arvo * Double.Parse(tulos.Text)).ToString();
+                    break;
+                case ":":
+                    tulos.Text = (arvo / Double.Parse(tulos.Text)).ToString();
+                    break;
+                default:
+                    break;
+            }//lopeta switch
         }
     }
 }
