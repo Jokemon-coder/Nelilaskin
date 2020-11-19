@@ -27,7 +27,7 @@ namespace Nelilaskin //koodi alkaa
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e) //About-osio, josta näkee tekijän ja ohjeet Copy-painikkeen käyttöön
         {
-            MessageBox.Show("Tekijä: Joel\nCopy-painikkeen käyttö:\nValitse luku, valitse laskutapa,\npaina 'Copy' ja paina yhtäsuuruusmerkkiä.", "Nelilaskin About");
+            MessageBox.Show("Tekijä: Joel", "About");
         }
 
 
