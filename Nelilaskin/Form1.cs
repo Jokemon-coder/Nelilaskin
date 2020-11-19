@@ -63,12 +63,14 @@ namespace Nelilaskin //koodi alkaa
                 tulos.Clear();
             operaatio_Click = false; //bool operaatio_Click pistetään falseksi
             Button b = (Button)sender; //Muutetaan nappi lähettäjäksi
+            
+            if (tulos.Text == ",")
+            {
+                if (!tulos.Text.Contains(","))
+                    tulos.Text = tulos.Text + b.Text;
+            }
+            else
             tulos.Text = tulos.Text + b.Text;
-        }
-
-        private void tekstiLoota_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void nappiOperaattori_Click(object sender, EventArgs e)
@@ -97,9 +99,151 @@ namespace Nelilaskin //koodi alkaa
                 case ":":
                     tulos.Text = (arvo / Double.Parse(tulos.Text)).ToString();
                     break;
+                case "Mod":
+                    tulos.Text = (arvo % Double.Parse(tulos.Text)).ToString();
+                    break;
+                case "Exp":
+                    tulos.Text = Math.Pow(arvo, Double.Parse(tulos.Text)).ToString();
+                    break;
                 default:
                     break;
             } //lopeta switch
+
+        }
+
+
+        private void nelilaskinToolStripMenuItem_Click(object sender, EventArgs e) //Kun painaa "nelilaskin" painikkeesta, se säätä leveyden näyttämään vain nelilaskimen
+        {
+            this.Width = 414;
+            tulos.Width = 374;
+            tableLayoutPanel1.Width = 377;
+        }
+
+        private void funktiolaskinToolStripMenuItem_Click(object sender, EventArgs e) //Kun painaa "funktiolaskin" painikkeesta, se säätä leveyden näyttämään vain funktiolaskimen
+        {
+            this.Width = 828;
+            tulos.Width = 786;
+            tableLayoutPanel1.Width = 792;
+        }
+
+        private void pii_Click(object sender, EventArgs e) //Pii-painike
+        {
+            tulos.Text = Math.PI.ToString(); //Kun painaa Pii-painikkeesta, kenttään tulee esille laskettu pii
+        }
+
+        private void Log_Click(object sender, EventArgs e) //Logaritmi-painike
+        {
+            double ilog = Double.Parse(tulos.Text);
+            ilog = Math.Log10(ilog);                    //Laskee logaritmin
+            tulos.Text = System.Convert.ToString(ilog); //Kenttään tulee esille logaritmi
+        }
+
+        private void sqrt_Click(object sender, EventArgs e) //Neliöjuuri-painike
+        {
+            double sq = Double.Parse(tulos.Text);
+            sq = Math.Sqrt(sq); //Laskee annetun luvun neliöjuuren
+            tulos.Text = System.Convert.ToString(sq); //Tulostaa neliöjuuren kenttään
+        }
+
+        private void Sinh_Click(object sender, EventArgs e) //hyperbolinen sini
+        {
+            double qSinh = Double.Parse(tulos.Text);
+            qSinh = Math.Sinh(qSinh); //laskee hyperbolisen sinin
+            tulos.Text = System.Convert.ToString(qSinh); //tulostaa tuloksen kenttään
+        }
+
+        private void Sin_Click(object sender, EventArgs e) //sini
+        {
+            double qSin = Double.Parse(tulos.Text);
+            qSin = Math.Sin(qSin); //laskee sinin
+            tulos.Text = System.Convert.ToString(qSin); //tulostaa tuloksen kenttään
+        }
+
+        private void Cosh_Click(object sender, EventArgs e)
+        {
+            double qCosh = Double.Parse(tulos.Text);
+            qCosh = Math.Cosh(qCosh);
+            tulos.Text = System.Convert.ToString(qCosh); //tulostaa tuloksen kenttään
+        }
+
+        private void Cos_Click(object sender, EventArgs e)
+        {
+            double qCos = Double.Parse(tulos.Text);
+            qCos = Math.Cos(qCos);
+            tulos.Text = System.Convert.ToString(qCos); //tulostaa tuloksen kenttään
+        }
+
+        private void Tanh_Click(object sender, EventArgs e)
+        {
+            double qTanh = Double.Parse(tulos.Text);
+            qTanh = Math.Tanh(qTanh);
+            tulos.Text = System.Convert.ToString(qTanh); //tulostaa tuloksen kenttään
+        }
+
+        private void Tan_Click(object sender, EventArgs e)
+        {
+            double qTan = Double.Parse(tulos.Text);
+            qTan = Math.Tan(qTan);
+            tulos.Text = System.Convert.ToString(qTan); //tulostaa tuloksen kenttään
+        }
+
+        private void Bin_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(tulos.Text);
+            tulos.Text = System.Convert.ToString(a, 2); //tulostaa tuloksen kenttään
+        }
+
+        private void Hex_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(tulos.Text);
+            tulos.Text = System.Convert.ToString(a, 16); //tulostaa tuloksen kenttään
+        }
+
+        private void Oct_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(tulos.Text);
+            tulos.Text = System.Convert.ToString(a, 8); //tulostaa tuloksen kenttään
+        }
+
+        private void Dec_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(tulos.Text);
+            tulos.Text = System.Convert.ToString(a); //tulostaa tuloksen kenttään
+        }
+
+        private void X2_Click(object sender, EventArgs e)
+        {
+            Double a;
+            a = Convert.ToDouble(tulos.Text) * Convert.ToDouble(tulos.Text);
+            tulos.Text = System.Convert.ToString(a); //tulostaa tuloksen kenttään
+        }
+
+        private void X3_Click(object sender, EventArgs e)
+        {
+            Double a;
+            a = Convert.ToDouble(tulos.Text) * Convert.ToDouble(tulos.Text) * Convert.ToDouble(tulos.Text);
+            tulos.Text = System.Convert.ToString(a); //tulostaa tuloksen kenttään
+        }
+
+        private void button_X1_Click(object sender, EventArgs e)
+        {
+            Double a;
+            a = Convert.ToDouble(1.0 / Convert.ToDouble(tulos.Text));
+            tulos.Text = System.Convert.ToString(a); //tulostaa tuloksen kenttään
+        }
+
+        private void button_InX_Click(object sender, EventArgs e)
+        {
+            double ilog = Double.Parse(tulos.Text);
+            ilog = Math.Log(ilog);
+            tulos.Text = System.Convert.ToString(ilog); //tulostaa tuloksen kenttään
+        }
+
+        private void Rosentti_Click(object sender, EventArgs e)
+        {
+            Double a;
+            a = Convert.ToDouble(tulos.Text) / Convert.ToDouble(100);
+            tulos.Text = System.Convert.ToString(a); //tulostaa tuloksen kenttään
         }
     }
 } //koodi päättyy

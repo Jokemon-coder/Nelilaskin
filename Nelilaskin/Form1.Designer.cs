@@ -49,14 +49,39 @@
             this.NappiClear = new System.Windows.Forms.Button();
             this.NappiReset = new System.Windows.Forms.Button();
             this.NappiCopy = new System.Windows.Forms.Button();
+            this.nappi_Piste = new System.Windows.Forms.Button();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nelilaskinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funktiolaskinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button_Rosentti = new System.Windows.Forms.Button();
+            this.button_Oct = new System.Windows.Forms.Button();
+            this.button_InX = new System.Windows.Forms.Button();
+            this.button_Hex = new System.Windows.Forms.Button();
+            this.button_Tan = new System.Windows.Forms.Button();
+            this.button_Tanh = new System.Windows.Forms.Button();
+            this.button_X1 = new System.Windows.Forms.Button();
+            this.button_Bin = new System.Windows.Forms.Button();
+            this.button_Cos = new System.Windows.Forms.Button();
+            this.button_Cosh = new System.Windows.Forms.Button();
+            this.button_X3 = new System.Windows.Forms.Button();
+            this.button_Dec = new System.Windows.Forms.Button();
+            this.button_Sin = new System.Windows.Forms.Button();
+            this.button_Sinh = new System.Windows.Forms.Button();
+            this.button_X2 = new System.Windows.Forms.Button();
+            this.nappi_Sqrt = new System.Windows.Forms.Button();
+            this.button_Log = new System.Windows.Forms.Button();
+            this.button_Pii = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -70,7 +95,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.97756F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.02244F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 413);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(378, 413);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -82,7 +107,7 @@
             this.tulos.Multiline = true;
             this.tulos.Name = "tulos";
             this.tulos.ReadOnly = true;
-            this.tulos.Size = new System.Drawing.Size(374, 76);
+            this.tulos.Size = new System.Drawing.Size(372, 76);
             this.tulos.TabIndex = 0;
             this.tulos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -111,6 +136,7 @@
             this.tableLayoutPanel2.Controls.Add(this.NappiClear, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.NappiReset, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.NappiCopy, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.nappi_Piste, 2, 4);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 85);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
@@ -120,7 +146,10 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(374, 325);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(372, 325);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // NappiEqual
@@ -321,6 +350,17 @@
             this.NappiCopy.UseVisualStyleBackColor = true;
             this.NappiCopy.Click += new System.EventHandler(this.nappiCopy_Click);
             // 
+            // nappi_Piste
+            // 
+            this.nappi_Piste.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nappi_Piste.Location = new System.Drawing.Point(189, 263);
+            this.nappi_Piste.Name = "nappi_Piste";
+            this.nappi_Piste.Size = new System.Drawing.Size(87, 59);
+            this.nappi_Piste.TabIndex = 21;
+            this.nappi_Piste.Text = ",";
+            this.nappi_Piste.UseVisualStyleBackColor = true;
+            this.nappi_Piste.Click += new System.EventHandler(this.NappiNum_Click);
+            // 
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -328,23 +368,39 @@
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(399, 24);
+            this.menuStrip.Size = new System.Drawing.Size(396, 24);
             this.menuStrip.TabIndex = 1;
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem1});
+            this.nelilaskinToolStripMenuItem,
+            this.funktiolaskinToolStripMenuItem,
+            this.exitToolStripMenuItem2});
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.exitToolStripMenuItem.Text = "File";
             // 
-            // exitToolStripMenuItem1
+            // nelilaskinToolStripMenuItem
             // 
-            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem1.Text = "Exit";
-            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.poistu_Click);
+            this.nelilaskinToolStripMenuItem.Name = "nelilaskinToolStripMenuItem";
+            this.nelilaskinToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nelilaskinToolStripMenuItem.Text = "Nelilaskin";
+            this.nelilaskinToolStripMenuItem.Click += new System.EventHandler(this.nelilaskinToolStripMenuItem_Click);
+            // 
+            // funktiolaskinToolStripMenuItem
+            // 
+            this.funktiolaskinToolStripMenuItem.Name = "funktiolaskinToolStripMenuItem";
+            this.funktiolaskinToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funktiolaskinToolStripMenuItem.Text = "Funktiolaskin";
+            this.funktiolaskinToolStripMenuItem.Click += new System.EventHandler(this.funktiolaskinToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem2
+            // 
+            this.exitToolStripMenuItem2.Name = "exitToolStripMenuItem2";
+            this.exitToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem2.Text = "Exit";
+            this.exitToolStripMenuItem2.Click += new System.EventHandler(this.poistu_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -357,15 +413,279 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 4;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.Controls.Add(this.button20, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.button19, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.button_Rosentti, 3, 4);
+            this.tableLayoutPanel3.Controls.Add(this.button_Oct, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.button_InX, 3, 3);
+            this.tableLayoutPanel3.Controls.Add(this.button_Hex, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.button_Tan, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.button_Tanh, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.button_X1, 3, 2);
+            this.tableLayoutPanel3.Controls.Add(this.button_Bin, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.button_Cos, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.button_Cosh, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.button_X3, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.button_Dec, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.button_Sin, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.button_Sinh, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.button_X2, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.nappi_Sqrt, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button_Log, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button_Pii, 0, 0);
+            this.tableLayoutPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(425, 115);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 5;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(374, 325);
+            this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // button20
+            // 
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.Location = new System.Drawing.Point(96, 263);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(87, 59);
+            this.button20.TabIndex = 21;
+            this.button20.Text = "Mod";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.nappiOperaattori_Click);
+            // 
+            // button19
+            // 
+            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.Location = new System.Drawing.Point(3, 263);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(87, 59);
+            this.button19.TabIndex = 20;
+            this.button19.Text = "Exp";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.nappiOperaattori_Click);
+            // 
+            // button_Rosentti
+            // 
+            this.button_Rosentti.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Rosentti.Location = new System.Drawing.Point(282, 263);
+            this.button_Rosentti.Name = "button_Rosentti";
+            this.button_Rosentti.Size = new System.Drawing.Size(87, 59);
+            this.button_Rosentti.TabIndex = 19;
+            this.button_Rosentti.Text = "%";
+            this.button_Rosentti.UseVisualStyleBackColor = true;
+            this.button_Rosentti.Click += new System.EventHandler(this.Rosentti_Click);
+            // 
+            // button_Oct
+            // 
+            this.button_Oct.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Oct.Location = new System.Drawing.Point(189, 263);
+            this.button_Oct.Name = "button_Oct";
+            this.button_Oct.Size = new System.Drawing.Size(87, 59);
+            this.button_Oct.TabIndex = 17;
+            this.button_Oct.Text = "Oct";
+            this.button_Oct.UseVisualStyleBackColor = true;
+            this.button_Oct.Click += new System.EventHandler(this.Oct_Click);
+            // 
+            // button_InX
+            // 
+            this.button_InX.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_InX.Location = new System.Drawing.Point(282, 198);
+            this.button_InX.Name = "button_InX";
+            this.button_InX.Size = new System.Drawing.Size(87, 59);
+            this.button_InX.TabIndex = 15;
+            this.button_InX.Text = "In x";
+            this.button_InX.UseVisualStyleBackColor = true;
+            this.button_InX.Click += new System.EventHandler(this.button_InX_Click);
+            // 
+            // button_Hex
+            // 
+            this.button_Hex.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Hex.Location = new System.Drawing.Point(189, 198);
+            this.button_Hex.Name = "button_Hex";
+            this.button_Hex.Size = new System.Drawing.Size(87, 59);
+            this.button_Hex.TabIndex = 14;
+            this.button_Hex.Text = "Hex";
+            this.button_Hex.UseVisualStyleBackColor = true;
+            this.button_Hex.Click += new System.EventHandler(this.Hex_Click);
+            // 
+            // button_Tan
+            // 
+            this.button_Tan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Tan.Location = new System.Drawing.Point(96, 198);
+            this.button_Tan.Name = "button_Tan";
+            this.button_Tan.Size = new System.Drawing.Size(87, 59);
+            this.button_Tan.TabIndex = 13;
+            this.button_Tan.Text = "Tan";
+            this.button_Tan.UseVisualStyleBackColor = true;
+            this.button_Tan.Click += new System.EventHandler(this.Tan_Click);
+            // 
+            // button_Tanh
+            // 
+            this.button_Tanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Tanh.Location = new System.Drawing.Point(3, 198);
+            this.button_Tanh.Name = "button_Tanh";
+            this.button_Tanh.Size = new System.Drawing.Size(87, 59);
+            this.button_Tanh.TabIndex = 12;
+            this.button_Tanh.Text = "Tanh";
+            this.button_Tanh.UseVisualStyleBackColor = true;
+            this.button_Tanh.Click += new System.EventHandler(this.Tanh_Click);
+            // 
+            // button_X1
+            // 
+            this.button_X1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_X1.Location = new System.Drawing.Point(282, 133);
+            this.button_X1.Name = "button_X1";
+            this.button_X1.Size = new System.Drawing.Size(87, 59);
+            this.button_X1.TabIndex = 11;
+            this.button_X1.Text = "1/x";
+            this.button_X1.UseVisualStyleBackColor = true;
+            this.button_X1.Click += new System.EventHandler(this.button_X1_Click);
+            // 
+            // button_Bin
+            // 
+            this.button_Bin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Bin.Location = new System.Drawing.Point(189, 133);
+            this.button_Bin.Name = "button_Bin";
+            this.button_Bin.Size = new System.Drawing.Size(87, 59);
+            this.button_Bin.TabIndex = 10;
+            this.button_Bin.Text = "Bin";
+            this.button_Bin.UseVisualStyleBackColor = true;
+            this.button_Bin.Click += new System.EventHandler(this.Bin_Click);
+            // 
+            // button_Cos
+            // 
+            this.button_Cos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Cos.Location = new System.Drawing.Point(96, 133);
+            this.button_Cos.Name = "button_Cos";
+            this.button_Cos.Size = new System.Drawing.Size(87, 59);
+            this.button_Cos.TabIndex = 9;
+            this.button_Cos.Text = "Cos";
+            this.button_Cos.UseVisualStyleBackColor = true;
+            this.button_Cos.Click += new System.EventHandler(this.Cos_Click);
+            // 
+            // button_Cosh
+            // 
+            this.button_Cosh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Cosh.Location = new System.Drawing.Point(3, 133);
+            this.button_Cosh.Name = "button_Cosh";
+            this.button_Cosh.Size = new System.Drawing.Size(87, 59);
+            this.button_Cosh.TabIndex = 8;
+            this.button_Cosh.Text = "Cosh";
+            this.button_Cosh.UseVisualStyleBackColor = true;
+            this.button_Cosh.Click += new System.EventHandler(this.Cosh_Click);
+            // 
+            // button_X3
+            // 
+            this.button_X3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_X3.Location = new System.Drawing.Point(282, 68);
+            this.button_X3.Name = "button_X3";
+            this.button_X3.Size = new System.Drawing.Size(87, 59);
+            this.button_X3.TabIndex = 7;
+            this.button_X3.Text = "x^3";
+            this.button_X3.UseVisualStyleBackColor = true;
+            this.button_X3.Click += new System.EventHandler(this.X3_Click);
+            // 
+            // button_Dec
+            // 
+            this.button_Dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Dec.Location = new System.Drawing.Point(189, 68);
+            this.button_Dec.Name = "button_Dec";
+            this.button_Dec.Size = new System.Drawing.Size(87, 59);
+            this.button_Dec.TabIndex = 6;
+            this.button_Dec.Text = "Dec";
+            this.button_Dec.UseVisualStyleBackColor = true;
+            this.button_Dec.Click += new System.EventHandler(this.Dec_Click);
+            // 
+            // button_Sin
+            // 
+            this.button_Sin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Sin.Location = new System.Drawing.Point(96, 68);
+            this.button_Sin.Name = "button_Sin";
+            this.button_Sin.Size = new System.Drawing.Size(87, 59);
+            this.button_Sin.TabIndex = 5;
+            this.button_Sin.Text = "Sin";
+            this.button_Sin.UseVisualStyleBackColor = true;
+            this.button_Sin.Click += new System.EventHandler(this.Sin_Click);
+            // 
+            // button_Sinh
+            // 
+            this.button_Sinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Sinh.Location = new System.Drawing.Point(3, 68);
+            this.button_Sinh.Name = "button_Sinh";
+            this.button_Sinh.Size = new System.Drawing.Size(87, 59);
+            this.button_Sinh.TabIndex = 4;
+            this.button_Sinh.Text = "Sinh";
+            this.button_Sinh.UseVisualStyleBackColor = true;
+            this.button_Sinh.Click += new System.EventHandler(this.Sinh_Click);
+            // 
+            // button_X2
+            // 
+            this.button_X2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_X2.Location = new System.Drawing.Point(282, 3);
+            this.button_X2.Name = "button_X2";
+            this.button_X2.Size = new System.Drawing.Size(87, 59);
+            this.button_X2.TabIndex = 3;
+            this.button_X2.Text = "x^2";
+            this.button_X2.UseVisualStyleBackColor = true;
+            this.button_X2.Click += new System.EventHandler(this.X2_Click);
+            // 
+            // nappi_Sqrt
+            // 
+            this.nappi_Sqrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nappi_Sqrt.Location = new System.Drawing.Point(189, 3);
+            this.nappi_Sqrt.Name = "nappi_Sqrt";
+            this.nappi_Sqrt.Size = new System.Drawing.Size(87, 59);
+            this.nappi_Sqrt.TabIndex = 2;
+            this.nappi_Sqrt.Text = "Sqrt";
+            this.nappi_Sqrt.UseVisualStyleBackColor = true;
+            this.nappi_Sqrt.Click += new System.EventHandler(this.sqrt_Click);
+            // 
+            // button_Log
+            // 
+            this.button_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Log.Location = new System.Drawing.Point(96, 3);
+            this.button_Log.Name = "button_Log";
+            this.button_Log.Size = new System.Drawing.Size(87, 59);
+            this.button_Log.TabIndex = 1;
+            this.button_Log.Text = "Log";
+            this.button_Log.UseVisualStyleBackColor = true;
+            this.button_Log.Click += new System.EventHandler(this.Log_Click);
+            // 
+            // button_Pii
+            // 
+            this.button_Pii.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Pii.Location = new System.Drawing.Point(3, 3);
+            this.button_Pii.Name = "button_Pii";
+            this.button_Pii.Size = new System.Drawing.Size(87, 59);
+            this.button_Pii.TabIndex = 0;
+            this.button_Pii.Text = "𝝅";
+            this.button_Pii.UseVisualStyleBackColor = true;
+            this.button_Pii.Click += new System.EventHandler(this.pii_Click);
             // 
             // Nelilaskin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 452);
+            this.ClientSize = new System.Drawing.Size(396, 452);
+            this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
@@ -376,6 +696,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,9 +727,33 @@
         private System.Windows.Forms.TextBox tulos;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nelilaskinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funktiolaskinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button_Rosentti;
+        private System.Windows.Forms.Button button_Oct;
+        private System.Windows.Forms.Button button_InX;
+        private System.Windows.Forms.Button button_Hex;
+        private System.Windows.Forms.Button button_Tan;
+        private System.Windows.Forms.Button button_Tanh;
+        private System.Windows.Forms.Button button_X1;
+        private System.Windows.Forms.Button button_Bin;
+        private System.Windows.Forms.Button button_Cos;
+        private System.Windows.Forms.Button button_Cosh;
+        private System.Windows.Forms.Button button_X3;
+        private System.Windows.Forms.Button button_Dec;
+        private System.Windows.Forms.Button button_Sin;
+        private System.Windows.Forms.Button button_Sinh;
+        private System.Windows.Forms.Button button_X2;
+        private System.Windows.Forms.Button nappi_Sqrt;
+        private System.Windows.Forms.Button button_Log;
+        private System.Windows.Forms.Button button_Pii;
+        private System.Windows.Forms.Button nappi_Piste;
     }
 }
 
